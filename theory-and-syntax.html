@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--
+    Nesting of elements:
+    - Children needed to be nested properly within their parents.
+    - The closing title tag cannot appear after the closing head tag.
+ -->
+
+<!--
+    Emmet:
+    - Can type the first letter of any opening tag, and emmet will complete the rest.
+    - Use . after first letter, and then follow with name of class.
+ -->
+
+<!--
+    Whitespace collapsing property of HTML:
+    - HTML will ignore whitespace between element tags, as well as WITHING elements themselves.
+    - On typing 'Hello   World' (three spaces in between), only one space will be visible in the output.
+    - To create more spaces, seperate tags need to be used.
+ -->
+
+<!--
+    Line Breaks:
+    - Syntax: <br>
+    - If used between two elements, line break will only shift the second element to the next line, and not introduce an aditional line between them.
+ -->
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>HTML Theory and Syntax</title>
+
+    </head>
+
+    <body>
+
+        <!--
+            Headings:
+            - 6 total levels of headings.
+            - Without any additional formatting, h3 looks about as big as a defaul paragraph.
+        -->
+
+        <h1 id="top">This is an h1 header</h1> <!-- ids will be covered in CSS -->
+        <h2>This is an h2 header</h2>
+        <h3>This is an h3 header</h3>
+        <h4>This is an h4 header</h4>
+        <h5>This is an h5 header</h5>
+        <h6>This is an h6 header</h6>
+
+        <br>
+        <br>
+
+        <!--
+            Lorem dummy text:
+            - Type lorem and then press tab to use lorem dummy text generation with emmet.
+            - Write number of words required after lorem to produce longer or shorter text.
+        -->
+
+        <h2>Paragraph with Dummy Text:</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, pariatur!</p>
+
+        <br>
+        <br>
+
+        <!--
+            Images:
+            - src (source) and alt (alternate) are attributes of the image tag
+            - Some other attributes: height, width
+                - These can be used to resize the image within HTML, although it using CSS is a better practice, along with cropping the image before using it in the first place.
+                - If only height or only width values are changed, the other value changes accordingly while preserving the aspect ratio of the image.
+                - Both attributes CAN be changed manually, thereby disturbing the aspect ratio.
+            - Tags may have specific attributes, like these ones.
+            - Some attributes are common to all tags.
+            - The source for the image can be a direct web link, although sometimes the link may be very long.
+            - If image is in the same folder as the HTML file, use '/' (foward slash) followed by image file name as source
+                - Using only the foward slash will only work using the LiveServer extension, and not if the HTML file is opened directly.
+                - To fix this, either remove the forward slash, or use a '.' (period) before it. (this is a relative path)
+            - Copyright free image sites:
+                - pixabay
+                - pexels
+                - gratisography
+        -->
+
+        <h2>Image with WebLink:</h2>
+        <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="alternate text for image">
+
+        <br>
+        <br>
+
+        <h2>Example of AltText:</h2>
+        <img src="" alt="alternate text for image">
+
+        <br>
+        <br>
+
+        <h2>Example of Resized Image:</h2>
+        <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="image could not be loaded" width=400>
+
+        <br>
+        <br>
+
+        <h2>Example of Image to Understand Path:</h2>
+        <img src="./Assets/Stock Image of Girl Holding Camera in Field.avif" alt="image could not be loaded" width="400">
+
+        <br>
+        <br>
+
+        <!--
+            Links:
+            - Target attribute: if set to '_blank', opens link in new tab.
+            - Using '#' in href creats a dummy link; it is still clickable, jsut doesn't lead anywhere.
+        -->
+
+        <h2>Example of Links:</h2>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">sample link</a>
+
+        <br>
+        <br>
+
+        <h2>Example of Internal Link</h2>
+        <a href="internal-link.html">internal link</a>
+
+        <br>
+        <br>
+
+        <h2>Navigation Within Page</h2>
+        <a href="#top">go back to top</a>
+
+        <br>
+        <br>
+
+        <h2>Using images as links</h2>
+        <a href="#">
+            <img src="./Assets/Stock Image of Girl Holding Camera in Field.avif" alt="" width=100>
+        </a>
+
+        <br>
+        <br>
+
+        <h2>Superscript and Subscript Elements</h2>
+        <p> <sup>superscript</sup> regular text <sub>subscript</sub> </p>
+
+        <br>
+        <br>
+
+        <!--
+            Formatting using Strong and Emphasis:
+            - Normally, we would prefer having all styling done through CSS.
+            - However, emboldening and italicising through these elements has some unique applications.
+            - A user using an audio reader would hear strong and emphasis elements differently, which wouldn't be the case if styling were done through CSS.
+        -->
+
+        <h2>Strong and Emphasis Elements</h2>
+        <p> <strong>strong is bold</strong> </p>
+        <p> <em>emphasis is italicised</em> </p>
+
+        <br>
+        <br>
+
+        <!--
+            Special Characters:
+            - For codes - use google.
+            - Begin with '&', end with ';'.
+        -->
+
+        <h2>Special Characters</h2>
+        <p>Copyright character: &copy;</p>
+
+        <br>
+        <br>
+
+        <!--
+            Lists:
+            - Typical use-cases of unordered lists:
+                - Navigation using links.
+            - Lists can be nested.
+        -->
+
+        <h2>Unordered Lists:</h2>
+        <ul>
+
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+
+        </ul>
+
+        <br>
+        <br>
+
+        <h2>Ordered Lists:</h2>
+        <ol>
+
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+
+        </ol>
+
+        <br>
+        <br>
+
+        <!--
+            Tables:
+            - tr: table row
+            - th: table header
+            - td: table data
+        -->
+
+        <h2>Tables:</h2>
+        <table>
+
+            <tr>
+
+                <th>Serial Number</th>
+                <th>Name</th>
+                <th>Age</th>
+
+            </tr>
+
+            <tr>
+
+                <td>1</td>
+                <td>Jo</td>
+                <td>69</td>
+
+            </tr>
+
+            <tr>
+
+                <td>2</td>
+                <td>Mama</td>
+                <td>420</td>
+
+            </tr>
+
+        </table>
+
+        <br>
+        <br>
+
+        <!--
+            Forms:
+            - Attributes will not make sense without using JavaScript or other language to collect the form.
+            - FormSpree: service to send data collected from form to email.
+            - The 'name' attribute alters the address of the page once the form is submitted (this is from observation, not verified)
+            - The placeholder attribute can be used to display text in the form field before text is entered there by the user.
+            - Labels and ids:
+                - If the value for the 'for' attribute of the label matches the value for the 'id' attribute of the input, the input field is brought into focus when the label is clicked.
+                - If these values do not match, nothing happens upon clicking the label.
+            - Type attribute: password:
+                - The password input for forms causes text entered by the user to be blocked, i.e. dots appear instead of the characters typed in.
+                - LastPass recognises forms through the password attribute.
+            - Type attribute: email:
+                - If the type is set to email, the form will not allow submission unless an email is entered into the field.
+                - When submit is clicked, an error message will be shown and no submission will take place.
+                - Data will not be lost and the page will not reload by default.
+                - For a string to pass as an email, it must have an '@' symbol with an alphanumeric character on either side (from observation, not verified).
+            - Value attribute:
+                - If this attribute is used, a default value is alredy filled in the form.
+                - The difference between value and placeholder is that the placeholder text disappears as soon as the user starts writing their own text, while the value does not.
+                - Possible use cases are for a field like 'country' or for labelling the submission input.
+            - Type attribute: submit:
+                - Can be used like button to submit form.
+        -->
+
+        <h2>Forms:</h2>
+        <form action="" method="">
+
+            <label for="first-name">First Name:</label>
+            <input type="text" name="name" id="first-name">
+
+            <br>
+            <br>
+
+            <input type="password" placeholder="password">
+
+            <br>
+            <br>
+
+            <input type="email" value="sample@sample.com">
+
+            <br>
+            <br>
+
+            <input type="submit" value="submit form">
+
+            <br>
+            <br>
+
+            <button type="submit">submit</button>
+
+        </form>
+
+    </body>
+
+</html>
