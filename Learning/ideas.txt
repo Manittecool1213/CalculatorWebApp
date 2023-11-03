@@ -1,0 +1,12 @@
+- Use Ed Sheeran album covers as images for calculator buttons.
+- Read about lazy formatting of images.
+- Read about figma.
+- Setup prettier with custom formatting rules.
+- Start using VSC shortcuts cheatsheat regularly.
+    - Ctrl + D: same selection - very useful.
+    - Newline using control + enter - useful if cursor is in the middle of a line.
+- Resources:
+    - Mozilla Development Network (MDN).
+    - W3Schools - useful initially for basics.
+- To undo highlight matching tag: need to edit settings.json.
+- Refer to W3Schools for specificity calculations and precedence in CSS.

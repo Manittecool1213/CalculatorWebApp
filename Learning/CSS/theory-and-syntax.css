@@ -1,0 +1,160 @@
+/*
+General Information:
+- CSS: Cascading Style Sheets.
+- General format: selector{property:value; property:value}.
+    - Entire section of code - called CSS rule.
+    - Between properties - SEMICOLON is to be used - easily forgotten but very critical - style will not be applied if absent.
+    - Selector: used to identify element to which style is to be applied.
+    - Declaration block: block of code in which property-value pairs for selector are written.
+    - Declaration: a property-value pair.
+
+- CSS can be written (to style HTML) in three ways:
+    - Inline CSS:
+        - Styling added using 'style' attribute withing HTML tag.
+        - Disadvantages:
+            - HTML file gets cluttered and messy.
+            - Each element has to be styled individually; future edits become tedious.
+    - Internal CSS:
+        - Styling added using 'style' tag within 'head' tag.
+        - Advantage: multiple elements (e.g.] all headers) can be styled together.
+        - Disadvantage: no support for multiple pages.
+    - External CSS:
+        - Styling added using seperate CSS file.
+        - Advantage: multiple page support, as same CSS file can be linked to several pages.
+    - Precedence order:
+        - Inline > Inernal > External.
+        - Styles are applied to an element following this precedence order.
+        - This is important to remember while trying to debug errors.
+
+- Recommended file management practice:
+    - Keep all CSS files in separate CSS folder.
+    - For relative path: first need to access CSS folder, then required file.
+
+- Comments:
+    - Throughout this document, code has been commented out to avoid overlaps with later sections.
+    - To view changes, uncomment carefully around the parts to be viewed, since there are also a lot of theory comments.
+
+- General formatting rules:
+    - Starts and ends of conceptual sections are marked.
+    - Each major section is followed by 5 blank lines.
+*/
+
+
+
+
+/* --- SELECTORS --- */
+
+/*
+General information:
+- Most basic - element selector - applies styles based on type of element, e.g.] h1, p, etc..
+- Grouping selectors:
+    - Collections of elements can be grouped under a single selector, e.g.] body.
+    - Selectors can be grouped together using commas.
+*/
+
+/* Examples of element selector: */
+/* h1 {
+    color: red;
+} */
+
+/* Examples of grouping selectors: */
+/* body {
+    color: black;
+}
+
+h2, p {
+    color: black;
+} */
+
+/*
+ID Selectors:
+- Used to identify elements.
+- Can be used to distinguish two elements of the same type (e.g.] two h1s).
+- IDs are meant to be unique; two elements shouldn't be given the same ID.
+- For identifying multiple elements, classes should be used instead.
+*/
+/* #ID1 {
+    background: black;
+} */
+
+/* Class Selectors: used to identify groups of elements. */
+/* .Class1 {
+    color: green;
+}
+
+.Class2 {
+    color: red;
+} */
+
+/*
+Combining IDs and classes:
+- Elements can have both ID and class attributes.
+- Usecase: an element belongs to a class, but needs specific styliing which is different from other members of the class.
+*/
+
+/*
+Div and Span:
+- Divs are used to group elemnts together at the BLOCK level.
+- Spans are used to group elements together at the INLINE level.
+- If a div were to be used instead of a span within a paragraph, a newline character would automatically be added before and after the div.
+- Classes and IDs can be applied to divs and spans.
+*/
+
+/* div {
+    color: blue;
+}
+
+span {
+    text-transform: uppercase;
+} */
+
+/* END OF SELECTORS */
+
+
+
+
+
+/* --- INHERITANCE --- */
+
+/*
+General information:
+- In general, an element will inherit properties from its parent.
+    - e.g.] a paragraph will take on the colour of the body.
+- Inheritance is overriden if specific properties are defined.
+    - e.g.] if the paragraph is placed in a div, it will take on the colour of the div instead of that of the body.
+    - e.g.] even within the div, if properties are specified specifically for the paragraph, those properties will be taken on instead of the properties of the div.
+- Properties are independent, and only specific properties are overriden.
+    e.g.] font-family:
+        - If the font family of the body is changed, this effect will be applied to all the elements within the body.
+        - Even if another property such as colour is overriden for a specific element, it will have no effect on the font family, and it will continue to be the font family specified for the body.
+- Not all properties are inherited.
+    e.g.] border:
+        - If a border is applied to a div, the div itself will be surrounded by a border.
+        - Each element of the div wil not have its own border.
+*/
+
+/* END OF INHERITANCE */
+
+
+
+
+
+/* --- LAST RULE, SPECIFICITY, AND UNIVERSAL SELECTOR --- */
+
+/*
+Last Rule:
+- The LAST rule, i.e., the one that appears lowest in the file, is applied, irrespective of conflicts.
+- When working with large files - take care to not override rules written higher up in the file by adding new ones below.
+*/
+
+/* Specificity: value to determine precedence in CSS. */
+
+/*
+Universal Selector:
+- Syntax: '*'.
+- Applies properties to every single element.
+- Has the least specificity.
+- Use cases: related to resetting default browser properties.
+*/
+
+/* END OF LAST RULE, SPECIFICITY, AND UNIVERSAL SELECTOR */

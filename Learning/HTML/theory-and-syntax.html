@@ -5,18 +5,18 @@
 <!--
     Nesting of elements:
     - Children needed to be nested properly within their parents.
-    - The closing title tag cannot appear after the closing head tag.
+    - e.g.] The closing title tag cannot appear after the closing head tag.
  -->
 
 <!--
     Emmet:
     - Can type the first letter of any opening tag, and emmet will complete the rest.
-    - Use . after first letter, and then follow with name of class.
+    - Use '.' after first letter, and then follow with name of class.
  -->
 
 <!--
     Whitespace collapsing property of HTML:
-    - HTML will ignore whitespace between element tags, as well as WITHING elements themselves.
+    - HTML will ignore whitespace between element tags, as well as WITHIN elements themselves.
     - On typing 'Hello   World' (three spaces in between), only one space will be visible in the output.
     - To create more spaces, seperate tags need to be used.
  -->
@@ -31,6 +31,7 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Ignore meta elements for the time being; will be discussed with JS. -->
 
         <title>HTML Theory and Syntax</title>
 
@@ -41,7 +42,7 @@
         <!--
             Headings:
             - 6 total levels of headings.
-            - Without any additional formatting, h3 looks about as big as a defaul paragraph.
+            - Without any additional formatting, h3 looks about as big as a default paragraph.
         -->
 
         <h1 id="top">This is an h1 header</h1> <!-- ids will be covered in CSS -->
@@ -51,6 +52,7 @@
         <h5>This is an h5 header</h5>
         <h6>This is an h6 header</h6>
 
+        <br>
         <br>
         <br>
 
@@ -65,45 +67,48 @@
 
         <br>
         <br>
+        <br>
 
         <!--
             Images:
-            - src (source) and alt (alternate) are attributes of the image tag
+            - src (source) and alt (alternate) are attributes of the image tag.
             - Some other attributes: height, width
-                - These can be used to resize the image within HTML, although it using CSS is a better practice, along with cropping the image before using it in the first place.
+                - These can be used to resize the image within HTML, although using CSS is a better practice, along with cropping the image before using it in the first place.
                 - If only height or only width values are changed, the other value changes accordingly while preserving the aspect ratio of the image.
                 - Both attributes CAN be changed manually, thereby disturbing the aspect ratio.
             - Tags may have specific attributes, like these ones.
             - Some attributes are common to all tags.
             - The source for the image can be a direct web link, although sometimes the link may be very long.
-            - If image is in the same folder as the HTML file, use '/' (foward slash) followed by image file name as source
+            - If image is in the same folder as the HTML file, use '/' (foward slash) followed by image file name as source.
                 - Using only the foward slash will only work using the LiveServer extension, and not if the HTML file is opened directly.
-                - To fix this, either remove the forward slash, or use a '.' (period) before it. (this is a relative path)
+                - To fix this, either remove the forward slash, or use a '.' (period) before it(this is a relative path).
             - Copyright free image sites:
                 - pixabay
                 - pexels
                 - gratisography
         -->
 
-        <h2>Image with WebLink:</h2>
+        <h2>Images:</h2>
+
+        <h4>Image with WebLink:</h4>
         <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="alternate text for image">
 
         <br>
         <br>
 
-        <h2>Example of AltText:</h2>
+        <h4>Example of AltText:</h4>
         <img src="" alt="alternate text for image">
 
         <br>
         <br>
 
-        <h2>Example of Resized Image:</h2>
+        <h4>Example of Resized Image:</h4>
         <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="image could not be loaded" width=400>
 
         <br>
         <br>
 
-        <h2>Example of Image to Understand Path:</h2>
+        <h4>Example of Image to Understand Path:</h4>
         <img src="./Assets/Stock Image of Girl Holding Camera in Field.avif" alt="image could not be loaded" width="400">
 
         <br>
@@ -112,28 +117,30 @@
         <!--
             Links:
             - Target attribute: if set to '_blank', opens link in new tab.
-            - Using '#' in href creats a dummy link; it is still clickable, jsut doesn't lead anywhere.
+            - Using '#' in href creats a dummy link; it is still clickable, just doesn't lead anywhere.
         -->
 
-        <h2>Example of Links:</h2>
+        <h2>Links:</h2>
+
+        <h4>Example of Links:</h4>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">sample link</a>
 
         <br>
         <br>
 
-        <h2>Example of Internal Link</h2>
+        <h4>Example of Internal Link:</h4>
         <a href="internal-link.html">internal link</a>
 
         <br>
         <br>
 
-        <h2>Navigation Within Page</h2>
+        <h4>Navigation Within Page:</h4>
         <a href="#top">go back to top</a>
 
         <br>
         <br>
 
-        <h2>Using images as links</h2>
+        <h4>Using images as links:</h4>
         <a href="#">
             <img src="./Assets/Stock Image of Girl Holding Camera in Field.avif" alt="" width=100>
         </a>
@@ -151,7 +158,7 @@
             Formatting using Strong and Emphasis:
             - Normally, we would prefer having all styling done through CSS.
             - However, emboldening and italicising through these elements has some unique applications.
-            - A user using an audio reader would hear strong and emphasis elements differently, which wouldn't be the case if styling were done through CSS.
+            -  e.g.] a user using an audio reader would hear strong and emphasis elements differently, which wouldn't be the case if styling were done through CSS.
         -->
 
         <h2>Strong and Emphasis Elements</h2>
@@ -175,8 +182,7 @@
 
         <!--
             Lists:
-            - Typical use-cases of unordered lists:
-                - Navigation using links.
+            - Typical use-cases of unordered lists: navigation using links.
             - Lists can be nested.
         -->
 
@@ -208,9 +214,9 @@
 
         <!--
             Tables:
-            - tr: table row
-            - th: table header
-            - td: table data
+            - tr: table row.
+            - th: table header.
+            - td: table data.
         -->
 
         <h2>Tables:</h2>
@@ -247,17 +253,17 @@
 
         <!--
             Forms:
-            - Attributes will not make sense without using JavaScript or other language to collect the form.
+            - Attributes will not make sense without using JavaScript or other language to collect data from the form.
             - FormSpree: service to send data collected from form to email.
-            - The 'name' attribute alters the address of the page once the form is submitted (this is from observation, not verified)
+            - Once a form is submitted, key value pairs of the data entered by the user are visible in the page address.
             - The placeholder attribute can be used to display text in the form field before text is entered there by the user.
             - Labels and ids:
-                - If the value for the 'for' attribute of the label matches the value for the 'id' attribute of the input, the input field is brought into focus when the label is clicked.
+                - If the value of the 'for' attribute of the label matches the value of the 'id' attribute of the input, the input field is brought into focus when the label is clicked.
                 - If these values do not match, nothing happens upon clicking the label.
-            - Type attribute: password:
+            - Type attribute - password:
                 - The password input for forms causes text entered by the user to be blocked, i.e. dots appear instead of the characters typed in.
                 - LastPass recognises forms through the password attribute.
-            - Type attribute: email:
+            - Type attribute - email:
                 - If the type is set to email, the form will not allow submission unless an email is entered into the field.
                 - When submit is clicked, an error message will be shown and no submission will take place.
                 - Data will not be lost and the page will not reload by default.
@@ -266,25 +272,86 @@
                 - If this attribute is used, a default value is alredy filled in the form.
                 - The difference between value and placeholder is that the placeholder text disappears as soon as the user starts writing their own text, while the value does not.
                 - Possible use cases are for a field like 'country' or for labelling the submission input.
-            - Type attribute: submit:
+            - Type attribute - submit:
                 - Can be used like button to submit form.
+                - If the input button design is very simple, this method can be used.
+                - If the design is more complex, it is preferable to use a button, as buttons are easier to manipulate.
+            - Textarea:
+                - Text entered within element tags is displayed inside the textbox.
+                - This is similar to the value attribute; the text doesn't automatically disappear when the user begins typing into the field.
+                - By default, there is a reszing toggle in the bottom right of the textarea field.
+            - Radio Buttons:
+                - Buttons which allow the user to select only one option from a list of options.
+                - The text following the tag is displayed as the text of the option.
+                - Options are identified as being mutually exclusive (i.e. being options of the same question) through the name attribute.
+                - Submission of data is done through the value attribute.
+            - Checkboxes:
+                - Similar to radio buttons, but allow more than one option to be selected from a list of options.
+                - Checked attribute:
+                    - If present, the corresponding checkbox is pre-checked.
+                    - Simply having the attribute present in the tag functions exactly like writing checked='checked'.
+            - Select:
+                - Cretes a drop down list to select options from.
+                - Only one option can be selected.
         -->
 
         <h2>Forms:</h2>
         <form action="" method="">
 
+            <h4>Basic Text Input Field:</h4>
             <label for="first-name">First Name:</label>
             <input type="text" name="name" id="first-name">
 
             <br>
             <br>
 
+            <h4>Password Input Field:</h4>
             <input type="password" placeholder="password">
 
             <br>
             <br>
 
+            <h4>Email Input field:</h4>
             <input type="email" value="sample@sample.com">
+
+            <br>
+            <br>
+
+            <h4>TextArea Input Field:</h4>
+            <textarea name="" id="" cols="30" rows="5">Enter text here</textarea>
+
+            <br>
+            <br>
+
+            <h4>Radio Buttons:</h4>
+            <p>Please select one of the following options:</p>
+            <input type="radio" name="radio options" value="value 1">Option 1
+            <input type="radio" name="radio options" value="value 2">Option 2
+            <input type="radio" name="radio options" value="value 3">Option 3
+
+            <br>
+            <br>
+
+            <h4>Check Boxes:</h4>
+            <p>Please select one or more of the following options:</p>
+            <input type="checkbox" name="checkbox options" value="value 1">Option 1
+            <input type="checkbox" name="checkbox options" value="value 2">Option 2
+            <input type="checkbox" name="checkbox options" value="value 3" checked>Option 3
+            <input type="checkbox" name="checkbox options" value="value 4" checked="checked">Option 4
+
+            <br>
+            <br>
+
+            <h4>Select:</h4>
+            <p>Please select one of the following options:</p>
+
+            <select name="select options" >
+
+                <option value="value 1">Option 1</option>
+                <option value="value 2">Option 2</option>
+                <option value="value 3">Option 3</option>
+
+            </select>
 
             <br>
             <br>
