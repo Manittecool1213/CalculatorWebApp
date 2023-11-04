@@ -12,3 +12,9 @@
 - Refer to W3Schools for specificity calculations and precedence in CSS.
 - Read about DOMContentLoaded error.
 - Read about regular expressions in javascript.
+
+- Features to add:
+    - Support for negative numbers.
+    - Rounded styling. DONE
+    - Errors stay on screen only for certain duration.
+    - Add support for typing.
