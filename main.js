@@ -68,10 +68,12 @@ function evaluateArithmetic(inputString) {
             break;
         case '*':
             outputValue = operand_1 * operand_2;
+            outputValue = outputValue.toFixed(5);
             break;
         case '/':
             if(operand_2 != 0) {
                 outputValue = operand_1 / operand_2;
+                outputValue = outputValue.toFixed(5);
             } else {
                 outputValue = 'ERROR: Division by Zero'
             }
