@@ -11,3 +11,4 @@
 - To undo highlight matching tag: need to edit settings.json.
 - Refer to W3Schools for specificity calculations and precedence in CSS.
 - Read about DOMContentLoaded error.
+- Read about regular expressions in javascript.

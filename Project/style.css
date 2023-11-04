@@ -1,8 +1,9 @@
-.grid-container {
+.button-container {
     display: flex;
     flex-wrap: wrap;
     max-width: 500px;
-    border: 2px solid;
+    /* border: 2px solid; */
+    margin: auto;
 }
 
 .grid-row {
@@ -14,21 +15,44 @@
 
 .grid-row button {
     flex: 1;
-    border: 1px solid;
+    /* border: 2px solid; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75em;
 }
 
-.screen-container {
-    min-height: 100px;
+.screen{
     max-width: 500px;
+    min-height: 150px;
+
+    background-color: rgb(6, 6, 63);
+    color: white;
+
     border: 2px solid;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+
+    margin: auto;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.screen {
-    min-width: 500px;
-    text-align: center;
-    max-width: 40%;
+.number, #buttonPERIOD {
+    background-color: rgb(12, 12, 93);
+    color: white;
 }
 
-/* #buttonEQUALS {
+.operator, #buttonEQUALS {
+    background-color: rgb(72, 231, 171);
+}
+
+#buttonAC, #buttonDEL {
+    background-color: rgb(12, 12, 93);
+    color: rgb(72, 231, 171);
+}
+
+#buttonEQUALS, #button0 {
     flex: 2;
-} */
+}
