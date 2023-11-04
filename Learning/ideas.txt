@@ -14,7 +14,6 @@
 - Read about regular expressions in javascript.
 
 - Features to add:
-    - Support for negative numbers.
-    - Rounded styling. DONE
-    - Errors stay on screen only for certain duration.
     - Add support for typing.
+
+- Read about eval() function in javascript, and write own code for BODMAS.

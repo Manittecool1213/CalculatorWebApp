@@ -21,12 +21,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Functionality for equals button:
         if(event.target.id === 'buttonEQUALS') {
-            // '===' has been used here instead of '==' for strong comparison. '===' also checks whether the two operands have the same datatype.
+        // '===' has been used here instead of '==' for strong comparison. '===' also checks whether the two operands have the same datatype.
+
             var operationString = screenElement.textContent.trim();
-            var evaluatedAnswer = evaluateArithmetic(operationString);
-            // Need to clear screen before answer is displayed.
+
             screenElement.textContent = ''
-            updateScreen(evaluatedAnswer);
+            // Need to clear screen before answer is displayed.
+
+            var evaluatedAnswer;
+            try {
+                evaluatedAnswer = eval(operationString);
+                // The eval function find the value of a valid arithmetic expression automatically, thereby removing the need of creating a set of BODMAS rules manually.
+
+                updateScreen(evaluatedAnswer);
+            } catch (error) {
+                evaluatedAnswer = 'INVALID EXPRESSION!';
+                updateScreen(evaluatedAnswer);
+
+                setTimeout(function() {
+                    screenElement.textContent = '';
+                }, 1000);
+                // The screen is reset 1 second after the 'Invalid Expression' message is shown.
+            }
         }
 
         // Functionality for delete button:
@@ -43,48 +59,3 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 })
 
-// This function takes in a string and outputs the result of the arithmetic expression represented by the string.
-function evaluateArithmetic(inputString) {
-    // Finding location of operator and identifying operands:
-    var outputValue;
-    var operator, operand_1, operand_2;
-    for(i = 0; i < inputString.length; i++) {
-        if(isOperator(inputString[i])) {
-            // Need to add support for multiplying negative numbers.
-            operator = inputString[i];
-            operand_1 = parseFloat(inputString.substring(0, i));
-            operand_2 = parseFloat(inputString.substring(i + 1));
-            break;
-        }
-    }
-
-    // Evaluating final answer depending on what the operator is:
-    switch(operator) {
-        case '+':
-            outputValue = operand_1 + operand_2;
-            break;
-        case '-':
-            outputValue = operand_1 - operand_2;
-            break;
-        case '*':
-            outputValue = operand_1 * operand_2;
-            outputValue = outputValue.toFixed(5);
-            break;
-        case '/':
-            if(operand_2 != 0) {
-                outputValue = operand_1 / operand_2;
-                outputValue = outputValue.toFixed(5);
-            } else {
-                outputValue = 'ERROR: Division by Zero'
-            }
-            break;
-        default:
-            outputValue = 'Unexpected Error';
-    }
-
-    return outputValue;
-}
-
-function isOperator(inputString) {
-    return (inputString === '+' || inputString === '-' || inputString === '*' || inputString === '/')
-}
