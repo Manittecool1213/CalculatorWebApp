@@ -1,3 +1,5 @@
+/* --- BUTTONS: --- */
+
 .button-container {
     display: flex;
     flex-wrap: wrap;
@@ -21,6 +23,10 @@
     border-radius: 1em;
 }
 
+/* --- END OF BUTTONS --- */
+
+
+
 .screen{
     max-width: 500px;
     min-height: 150px;
@@ -41,6 +47,10 @@
     justify-content: center;
 }
 
+
+
+/* --- GROUPED STYLING: --- */
+
 .number, #buttonPERIOD {
     background-color: rgb(12, 12, 93);
     color: white;
@@ -58,3 +68,5 @@
 #buttonEQUALS, #button0 {
     flex: 2;
 }
+
+/* --- END OF GROUPED STYLING --- */
