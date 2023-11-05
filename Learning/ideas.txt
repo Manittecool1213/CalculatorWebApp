@@ -1,19 +1,22 @@
+Future work on calculator:
 - Use Ed Sheeran album covers as images for calculator buttons.
+
+Reading:
 - Read about lazy formatting of images.
 - Read about figma.
+- Resources:
+    - Mozilla Development Network (MDN).
+    - W3Schools - useful initially for basics.
+- Refer to W3Schools for specificity calculations and precedence in CSS.
+
+VSCode:
 - Setup prettier with custom formatting rules.
 - Start using VSC shortcuts cheatsheat regularly.
     - Ctrl + D: same selection - very useful.
     - Newline using control + enter - useful if cursor is in the middle of a line.
-- Resources:
-    - Mozilla Development Network (MDN).
-    - W3Schools - useful initially for basics.
 - To undo highlight matching tag: need to edit settings.json.
-- Refer to W3Schools for specificity calculations and precedence in CSS.
+
+Javascript:
 - Read about DOMContentLoaded error.
 - Read about regular expressions in javascript.
-
-- Features to add:
-    - Add support for typing.
-
 - Read about eval() function in javascript, and write own code for BODMAS.
