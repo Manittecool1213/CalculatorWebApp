@@ -46,8 +46,8 @@ This project was initially made as an assignment for the Developers' Society (De
 
 - [x] Basic functionality (+, -, *, /) and basic styling
 - [x] Keyboard support
-- [] Intermediate functionality (exponents, trigonometric functions, memory)
-- [] Advanced functionality (equation solving, differentiation, integration)
+- [ ] Intermediate functionality (exponents, trigonometric functions, memory)
+- [ ] Advanced functionality (equation solving, differentiation, integration)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
